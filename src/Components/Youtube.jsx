@@ -24,7 +24,7 @@ export default function YoutubePage({user}) {
     // Fetch the uploaded videos from the server
     const fetchVideos = async () => {
       try {
-        const response = await fetch('http://localhost:4000/videos/getMyVideos', {
+        const response = await fetch('https://youtubecloneback.vercel.app/videos/getMyVideos', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ userId: user._id }),
@@ -45,7 +45,7 @@ export default function YoutubePage({user}) {
   useEffect(() => {
     const fetchOtherVideos = async () => {
       try {
-        const response = await fetch('http://localhost:4000/videos/getOtherVideos', {
+        const response = await fetch('https://youtubecloneback.vercel.app/videos/getOtherVideos', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ userId: user._id }),
@@ -89,7 +89,7 @@ export default function YoutubePage({user}) {
     formData.append('title', videoTitle);
     formData.append('file', videoPreview);
     try {
-      const response = await fetch('http://localhost:4000/user/videos', {
+      const response = await fetch('https://youtubecloneback.vercel.app/user/videos', {
           method: 'POST',
           body: formData,
       });
