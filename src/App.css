@@ -7,37 +7,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
+  background: black;
   color: white;
 }
 
-.login-container,
-.register-container,
-.youtube-clone {
-  background-color: black;
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-h2, label, input, button, a {
-  color: white;
-}
-
-a {
-  color: #00aaff; /* Cambia si prefieres otro color para los enlaces */
-}
-
-input, button {
-  background-color: #333;
-  border: 1px solid #555;
-  color: white;
-}
-
-input:focus, button:focus {
-  outline: none;
-  border-color: #00aaff;
-}
